@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+
+#bigWrapper {
+  position: fixed;
+  width: 100%;
+  left: 10%;
+  top: 20%;
+}
+
+#title {
+  position: absolute;
+  top: -170px;
+  left: 260px;
+  font-family: Pacifico;
+  font-size: 70px;
+}
+
+body {
+  color: white;
+  background-color: #333333;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 50px;
+}
+
+#myCanvas {
+  position: absolute;
+  top: 100px;
+  left: 340px;
+  color: green;
+}
+#text {
+  position: absolute;
+  top: 95px;
+  left: 405px;
+}
+
+#timeWrap {
+  width: 100px;
+  position: absolute;
+  left: 440px;
+  top: 190px;
+  text-align: center;
+}
+
+#time {
+  font-size: 70px;
+}
+
+.butt {
+  cursor: pointer;
+}
+
+#sessLen, #breakLen {
+  font-size: 12px;
+}
+#sessNum, #breakNum {
+  font-size: 30px;
+}
+
+#session {
+  position: absolute;
+  left: 520px;
+  top: 30px;
+}
+
+#break {
+  font-size: 25px;
+  position: absolute;
+  top: 30px;
+  left: 370px;
+}
+
+#more, #less, #moreB, #lessB {
+  cursor: pointer;
+}
