@@ -7,8 +7,9 @@ var timer
 
 function session() {
   $('#text').html('Session')
+  $('#time').html(time)
+  time--
   timer = setInterval(function() {
-    console.log(time)
     if (time >= 0) {
       $('#time').html(time--)
     } else {
@@ -22,7 +23,9 @@ function session() {
 
 function breakIt() {
   $('#text').html('Break!')
-  $('#text').css('left','420px')
+  $('#text').css('left', '420px')
+  $('#time').html(time)
+  time--
   timer = setInterval(function() {
     if (time >= 0) {
       $('#time').html(time--)
@@ -35,7 +38,7 @@ function breakIt() {
   }, 1000)
 }
 
-$('.butt').click(function(){
+$('.butt').click(function() {
   if (running) {
     clearInterval(timer)
     running = false
@@ -50,7 +53,7 @@ $('.butt').click(function(){
 });
 
 $('#less').click(function() {
-  if (!running && sessTime >= 1){
+  if (!running && sessTime >= 1) {
     sessTime--
     if (!onBreak) {
       time = sessTime
@@ -63,8 +66,6 @@ $('#less').click(function() {
 $('#more').click(function() {
   if (!running) {
     sessTime++
-    console.log('on break?')
-    console.log(onBreak)
     if (!onBreak) {
       time = sessTime
       $('#time').html(sessTime)
@@ -74,10 +75,8 @@ $('#more').click(function() {
 })
 
 $('#lessB').click(function() {
-  if (!running && breakTime >= 1){
+  if (!running && breakTime >= 1) {
     breakTime--
-    console.log('on break?')
-    console.log(onBreak)
     if (onBreak) {
       time = breakTime
       $('#time').html(breakTime)
